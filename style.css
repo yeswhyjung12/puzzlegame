@@ -1,0 +1,790 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#mainPage {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+#mainPage h1 {
+    margin: 0 auto;
+    padding-top: 12px;
+    margin-bottom: 6px;
+    text-align: center;
+    color: black;
+}
+
+#Sect1 {
+    width: 100%;
+    height: 80px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 52px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.logo #developer {
+    font-size: 2vmin;
+    font-weight: bold;
+    margin: 0 auto 2px;
+    color: #003964;
+    ;
+}
+
+#h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#goGame {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#mypuzzle {
+    width: 40%;
+    padding-top: 20px;
+}
+
+#goGame p {
+    margin: 16px;
+}
+
+#goGame a {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 28px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+}
+
+#goGame a:hover {
+    background-color: rgba(255, 212, 212, 0.8);
+}
+
+#whiteBoard {
+    width: 80%;
+    height: auto;
+    margin: 20px auto 40px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.puzzle-section {
+    margin: 20px 10px;
+    border: 2px solid black;
+    /** solid dotted dashed*/
+    padding: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.puzzle-section h2 {
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    /* font-weight: bold; */
+    color: black;
+}
+
+.puzzle-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.puzzle-section a {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    line-height: 150px;
+    border: 2px solid blue;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    background-color: #e0e0e0;
+}
+
+.puzzle-section img {
+    width: 148px;
+    height: 148px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#canvas-container p {
+    width: 40%;
+    font-size: 2.4vmin;
+    color: black;
+    margin: 0;
+    margin-left: 1.6vmin;
+    text-align: left;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #Sect1 {
+        height: 60px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #mainPage h1 {
+        margin: 12px auto 3px;
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 38px;
+        margin-top: 2px;
+        margin-bottom: 1px;
+        border-radius: 4px;
+
+    }
+
+    .logo #developer {
+        font-size: 2.4vmin;
+        margin: 0 auto 2px;
+    }
+
+    #mypuzzle {
+        width: 80%;
+    }
+
+    #goGame {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #goGame a {
+        width: 90%;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    #whiteBoard {
+        height: auto;
+        width: 94%;
+        margin: 20px auto;
+        padding: 20px 10px 10px;
+    }
+
+    .puzzle-section {
+        padding: 20px 10px;
+    }
+
+    .puzzle-section a {
+        width: 96px;
+        height: 96px;
+        line-height: 100px;
+        font-size: 12px;
+    }
+
+    .puzzle-section img {
+        width: 94px;
+        height: 94px;
+    }
+
+
+    .puzzle-section h2 {
+        font-size: 18px;
+    }
+
+    #canvas-container p {
+        font-size: 12px;
+        width: 60%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/**-------------------------------------------------------------------------------------*/
+
+#applePage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#grapePage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#orangePage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#watermelonPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+.firstSect {
+    width: 100%;
+    height: 80px;
+    color: white;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstSect p {
+    font-size: 4vmin;
+    color: #003964;
+}
+
+.goMenu {
+    background-color: transparent;
+    color: #003964;
+    /* border: 2px dashed #fff250; */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 12vmin;
+}
+
+.goMenu:hover {
+    color: red;
+}
+
+#applePage h1 {
+    font-size: 4vmin;
+}
+
+#grapePage h1 {
+    font-size: 4vmin;
+}
+
+#orangePage h1 {
+    font-size: 4vmin;
+}
+
+#watermelonPage h1 {
+    font-size: 4vmin;
+}
+
+#overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay1 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5.2vmin;
+}
+
+#overlay2 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5.2vmin;
+}
+
+#overlay3 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5.2vmin;
+}
+
+#overlay4 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5.2vmin;
+}
+
+#overlay1 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay2 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay3 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay4 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.retry-button {
+    background-color: #e57373;
+    font-size: 3.2vmin;
+    color: #ffffff;
+}
+
+.retry-button:hover {
+    background-color: #d32f2f;
+}
+
+.other-game-button {
+    background-color: #64b5f6;
+    font-size: 3.2vmin;
+    color: #ffffff;
+}
+
+.other-game-button:hover {
+    background-color: #1976d2;
+}
+
+#appleBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grapeBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#orangeBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#watermelonBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#appleBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#grapeBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+
+#orangeBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#watermelonBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+.blackBoard {
+    width: 80%;
+    height: 320px;
+    background-color: #ab783a;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin: 20px auto 0;
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.screen {
+    width: 96%;
+    height: 92%;
+    background-color: rgb(29, 84, 63);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents {
+    padding: 36px;
+}
+
+.screen p {
+    margin: 0 auto;
+}
+
+.screen img {
+    height: 180px;
+    width: 180px;
+    opacity: 96%;
+    margin: 18px auto 6px;
+}
+
+.secondSect {
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    color: #003964;
+    position: relative;
+    margin-top: -60px;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.textBox {
+    width: 90%;
+    height: auto;
+    margin: 30px 10px 20px 10px;
+    padding-top: 48px;
+    font-size: 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+    /* line-height: 1.5; */
+}
+
+.textBox p {
+    font-size: 22px;
+}
+
+/* 모바일 대응 */
+@media only screen and (max-width: 768px) {
+
+    .firstSect {
+        height: 50px;
+    }
+
+    .goMenu {
+        padding: 8px 14px;
+        font-size: 14px;
+        right: 16px;
+    }
+
+    #appleBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #grapeBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #orangeBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #watermelonBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #appleBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #grapeBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #orangeBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #watermelonBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    .blackBoard {
+        width: 90%;
+        height: 260px;
+        padding-top: 20px;
+    }
+
+    .screen {
+        width: 92%;
+    }
+
+    .contents {
+        padding: 24px;
+    }
+
+    .screen img {
+        height: auto;
+        width: auto;
+        max-height: 142px;
+        max-width: 142px;
+    }
+
+    .secondSect {
+        width: 100%;
+        height: auto;
+        margin-top: -60px;
+        padding: 60px 0;
+        flex-direction: column;
+    }
+
+    .textBox {
+        width: 90%;
+        font-size: 14px;
+        padding-top: 12px;
+        margin-bottom: 0;
+        height: auto;
+    }
+
+    .textBox p {
+        font-size: 16px;
+    }
+
+    #overlay1 p {
+        font-size: 6vmin;
+    }
+
+    #overlay2 p {
+        font-size: 6vmin;
+    }
+
+    #overlay3 p {
+        font-size: 6vmin;
+    }
+
+    .retry-button {
+        font-size: 5vmin;
+    }
+
+    .other-game-button {
+        font-size: 5vmin;
+    }
+}
+
+/**-------------------------------------------------------------------------------------*/
