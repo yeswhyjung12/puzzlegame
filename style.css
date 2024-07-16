@@ -64,10 +64,10 @@ body {
     ;
 }
 
-#h1 {
+/* #h1 {
     text-align: center;
     margin-top: 20px;
-}
+} */
 
 #goGame {
     width: 80%;
@@ -210,7 +210,7 @@ body {
     }
 
     .logo #developer {
-        font-size: 2.4vmin;
+        font-size: 3vmin;
         margin: 0 auto 2px;
     }
 
@@ -655,10 +655,30 @@ body {
         height: 50px;
     }
 
+    .firstSect p {
+        font-size: 5.2vmin;
+    }
+
     .goMenu {
         padding: 8px 14px;
-        font-size: 14px;
+        font-size: 18px;
         right: 16px;
+    }
+
+    #applePage h1 {
+        font-size: 6vmin;
+    }
+    
+    #grapePage h1 {
+        font-size: 6vmin;
+    }
+    
+    #orangePage h1 {
+        font-size: 6vmin;
+    }
+    
+    #watermelonPage h1 {
+        font-size: 6vmin;
     }
 
     #appleBoard {
@@ -767,15 +787,15 @@ body {
     }
 
     #overlay1 p {
-        font-size: 6vmin;
+        font-size: 7vmin;
     }
 
     #overlay2 p {
-        font-size: 6vmin;
+        font-size: 7vmin;
     }
 
     #overlay3 p {
-        font-size: 6vmin;
+        font-size: 7vmin;
     }
 
     .retry-button {

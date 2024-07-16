@@ -404,6 +404,35 @@
             document.getElementById('orangePage').style.display = 'none';
             document.getElementById('watermelonPage').style.display = 'none';
         }
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the selected section
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('active');
+            }
+            // Update the URL hash
+            window.location.hash = sectionId;
+        }
+
+        function displaySectionFromHash() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            } else {
+                showSection('mainPage'); // Default section
+            }
+        }
+
+        // Show the correct section based on the URL hash when the page loads
+        window.addEventListener('load', displaySectionFromHash);
+
+        // Handle hash change (e.g., back/forward navigation)
+        window.addEventListener('hashchange', displaySectionFromHash);
     </script>
 
     <script src="whiteboard.js"></script>
