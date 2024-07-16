@@ -58,8 +58,8 @@ function setupBoard() {
                 tile.addEventListener("dragend", dragend); // after drag and drop, swap the two tiles
 
                 // Touch Events
-                tile.addEventListener("touchstart", touchstart, { passive: true });
-                tile.addEventListener("touchmove", touchmove, { passive: true });
+                tile.addEventListener("touchstart", touchstart);
+                tile.addEventListener("touchmove", touchmove);
                 tile.addEventListener("touchend", touchend);
 
                 board.appendChild(tile);
