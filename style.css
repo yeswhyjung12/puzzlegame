@@ -38,7 +38,7 @@ body {
     align-items: center;
 }
 
-.logo {
+#logo {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -49,25 +49,41 @@ body {
     transform: translateX(-50%);
 }
 
-.logo img {
+#logo img {
     height: 52px;
     margin-top: 2px;
     margin-bottom: 2px;
 
 }
 
-.logo #developer {
+#logo #developer {
     font-size: 2vmin;
     font-weight: bold;
     margin: 0 auto 2px;
     color: #003964;
-    ;
 }
 
-/* #h1 {
-    text-align: center;
-    margin-top: 20px;
-} */
+#langs {
+    margin: 0 auto;
+    top: 3vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10%;
+}
+
+#langs label{
+    font-size: 2.4vmin;
+}
+
+#languageSelector {
+    font-size: 3.2vmin;
+    margin-top: 4px;
+    /* border: none; */
+}
+
 
 #goGame {
     width: 80%;
@@ -201,7 +217,7 @@ body {
         font-size: 18px;
     }
 
-    .logo img {
+    #logo img {
         height: 38px;
         margin-top: 2px;
         margin-bottom: 1px;
@@ -209,11 +225,25 @@ body {
 
     }
 
-    .logo #developer {
-        font-size: 3vmin;
+    #logo #developer {
+        font-size: 12px;
         margin: 0 auto 2px;
     }
 
+    #langs {
+        top: 2vmin;
+        right: 6vmin;
+    }
+
+    #langs label{
+        font-size: 16px;
+    }
+
+    #languageSelector {
+        font-size: 18px;
+        /* border: none; */
+    }
+    
     #mypuzzle {
         width: 80%;
     }
@@ -428,25 +458,25 @@ body {
 #overlay1 p {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 5.2vmin;
+    font-size: 5vmin;
 }
 
 #overlay2 p {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 5.2vmin;
+    font-size: 5vmin;
 }
 
 #overlay3 p {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 5.2vmin;
+    font-size: 5vmin;
 }
 
 #overlay4 p {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 5.2vmin;
+    font-size: 5vmin;
 }
 
 #overlay1 button {
@@ -652,6 +682,7 @@ body {
 @media only screen and (max-width: 768px) {
 
     .firstSect {
+        padding-top: 10px;
         height: 50px;
     }
 
@@ -668,15 +699,15 @@ body {
     #applePage h1 {
         font-size: 6vmin;
     }
-    
+
     #grapePage h1 {
         font-size: 6vmin;
     }
-    
+
     #orangePage h1 {
         font-size: 6vmin;
     }
-    
+
     #watermelonPage h1 {
         font-size: 6vmin;
     }
@@ -787,16 +818,21 @@ body {
     }
 
     #overlay1 p {
-        font-size: 7vmin;
+        font-size: 24px;
     }
 
     #overlay2 p {
-        font-size: 7vmin;
+        font-size: 24px;
     }
 
     #overlay3 p {
-        font-size: 7vmin;
+        font-size: 24px;
     }
+
+    #overlay4 p {
+        font-size: 24px;
+    }
+
 
     .retry-button {
         font-size: 5vmin;

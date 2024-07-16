@@ -12,21 +12,28 @@
 <body>
     <section id="mainPage">
         <div id="Sect1">
-            <div class="logo">
+            <div id="logo">
                 <img src="images/logo.png">
                 <p id="developer">coding-girin</p>
             </div>
+            <div id="langs">
+                <label for="languageSelector">Language</label>
+                <select id="languageSelector">
+                    <option value="en">English</option>
+                    <option value="ko" selected>한국어</option>
+                </select>
+            </div>
         </div>
-        <h1>게임을 선택해 주세요</h1>
+        <h1  data-i18n="chooseGame">게임을 선택해 주세요</h1>
         <div id="goGame">
             <a href="https://my-puzzle.netlify.app/" onclick="showOwnPuzzle(event)"><img id="mypuzzle" src="images/MyPuzzle.png">
-                <p>나의 사진으로 직소 퍼즐을 만들어 게임에 도전하세요 </p>
+                <p data-i18n="tryGame">나의 사진으로 직소 퍼즐을 만들어 게임에 도전하세요 </p>
             </a>
         </div>
 
         <div id="whiteBoard">
             <div class="puzzle-section">
-                <h2>슬라이딩 퍼즐 게임</h2>
+                <h2 data-i18n="slidingGame">슬라이딩 퍼즐 게임</h2>
                 <div class="puzzle-links">
                     <a href="#applePage" onclick="showApplePage(event)"><img src="images/apple.jpg" alt=""></a>
                     <a href="#grapePage" onclick="showGrapePage(event)"><img src="images/grape.jpg" alt=""></a>
@@ -37,7 +44,7 @@
             </div>
             <br>
             <div id="canvas-container">
-                <p>떠든 사람 <br>곰, 토끼, 호랑이 ... 기린 빼고</p>
+                <p data-i18n="loudPerson">떠든 사람 <br>곰, 토끼, 호랑이 ... 기린 빼고</p>
                 <canvas id="canvas"></canvas>
             </div>
         </div>
@@ -327,81 +334,9 @@
     </section>
     <!-- ---------------------------------------------------------------------- -->
 
-    <script>
-        // Function to dynamically load a script
-        function loadScript(src, callback) {
-            const script = document.createElement('script');
-            script.src = src;
-            script.type = 'text/javascript';
-            script.onload = callback;
-            script.onerror = function () {
-                console.error('Failed to load script: ' + src);
-            };
-            document.body.appendChild(script);
-        }
-
-        function showApplePage(event) {
-            event.preventDefault(); // 링크 기본 동작 방지
-            document.getElementById('mainPage').style.display = 'none';
-            document.getElementById('applePage').style.display = 'block';
-            document.getElementById('grapePage').style.display = 'none';
-            document.getElementById('orangePage').style.display = 'none';
-            document.getElementById('watermelonPage').style.display = 'none';
-            loadScript('apple.js', function () {
-                console.log('apple.js loaded');
-                setupBoard();
-            });
-        }
-
-        function showGrapePage(event) {
-            event.preventDefault(); // 링크 기본 동작 방지
-            document.getElementById('mainPage').style.display = 'none';
-            document.getElementById('applePage').style.display = 'none';
-            document.getElementById('grapePage').style.display = 'block';
-            document.getElementById('orangePage').style.display = 'none';
-            document.getElementById('watermelonPage').style.display = 'none';
-            loadScript('grape.js', function () {
-                console.log('grape.js loaded');
-                setupBoard();
-            });
-        }
-
-        function showOrangePage(event) {
-            event.preventDefault(); // 링크 기본 동작 방지
-            document.getElementById('mainPage').style.display = 'none';
-            document.getElementById('applePage').style.display = 'none';
-            document.getElementById('grapePage').style.display = 'none';
-            document.getElementById('orangePage').style.display = 'block';
-            document.getElementById('watermelonPage').style.display = 'none';
-            loadScript('orange.js', function () {
-                console.log('orange.js loaded');
-                setupBoard();
-            });
-        }
-
-        function showWatermelonPage(event) {
-            event.preventDefault(); // 링크 기본 동작 방지
-            document.getElementById('mainPage').style.display = 'none';
-            document.getElementById('applePage').style.display = 'none';
-            document.getElementById('grapePage').style.display = 'none';
-            document.getElementById('orangePage').style.display = 'none';
-            document.getElementById('watermelonPage').style.display = 'block';
-            loadScript('watermelon.js', function () {
-                console.log('watermelon.js loaded');
-                setupBoard();
-            });
-        }
-
-        function goBack(event) {
-            document.getElementById('mainPage').style.display = 'block';
-            document.getElementById('applePage').style.display = 'none';
-            document.getElementById('grapePage').style.display = 'none';
-            document.getElementById('orangePage').style.display = 'none';
-            document.getElementById('watermelonPage').style.display = 'none';
-        }
-    </script>
-
     <script src="whiteboard.js"></script>
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -9,6 +9,29 @@ var turns = 0;
 var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var originalOrder = [...imgOrder]; // 원래 순서 저장
 
+let SOUND = new Audio("music/bubblepop.mp3");
+SOUND.volume = 1;
+
+let END_SOUND = new Audio("music/bubbling_resound.mp3");
+END_SOUND.volume = 0.8;
+
+let AUDIO_CONTEXT;
+
+function startAudio() {
+    // Create the AudioContext after a user gesture
+    if (!AUDIO_CONTEXT) {
+        AUDIO_CONTEXT = new (AudioContext || window.AudioContext)();
+    }
+
+    // Resume the AudioContext if it is suspended
+    if (AUDIO_CONTEXT.state === 'suspended') {
+        AUDIO_CONTEXT.resume();
+    }
+
+    // Start playing the sound
+    SOUND.play();
+}
+
 window.onload = function () {
     setupBoard();
 }
@@ -35,8 +58,8 @@ function setupBoard() {
                 tile.addEventListener("dragend", dragend); // after drag and drop, swap the two tiles
 
                 // Touch Events
-                tile.addEventListener("touchstart", touchstart);
-                tile.addEventListener("touchmove", touchmove);
+                tile.addEventListener("touchstart", touchstart, { passive: true });
+                tile.addEventListener("touchmove", touchmove, { passive: true });
                 tile.addEventListener("touchend", touchend);
 
                 board.appendChild(tile);
@@ -87,6 +110,7 @@ function dragdrop() {
 }
 
 function dragend() {
+    SOUND.play();
     swapTiles();
 }
 
@@ -122,10 +146,9 @@ function touchmove(e) {
 }
 
 function touchend(e) {
+    SOUND.play();
     swapTiles();
 }
-
-
 
 function swapTiles() {
     if (!otherTile) return;
@@ -157,6 +180,7 @@ function swapTiles() {
 
         if (checkCompletion()) {
             disableTiles();
+            setTimeout(playMelody, 300);
             setTimeout(() => {
                 document.getElementById("overlay4").style.display = "flex"; // 오버레이를 표시
             }, 700); // 0.7초 지연
@@ -211,3 +235,7 @@ function shuffleArray(array) { // 무작위 배열 여기부터
         [array[i], array[j]] = [array[j], array[i]]; // array[i]와 array[j]의 위치를 교환
     }
 } //여기까지
+
+function playMelody() {
+    END_SOUND.play();
+}
