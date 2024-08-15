@@ -89,6 +89,8 @@ function otherGame() {
     document.getElementById('grapePage').style.display = 'none';
     document.getElementById('orangePage').style.display = 'none';
     document.getElementById('watermelonPage').style.display = 'none';
+    document.getElementById('mangoPage').style.display = 'none';
+    document.getElementById('tigerPage').style.display = 'none';
 }
 
 function dragstart() {

@@ -333,6 +333,24 @@ body {
     /* background-color: lightgray; */
 }
 
+#mangoPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#tigerPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
 .firstSect {
     width: 100%;
     height: 80px;
@@ -380,6 +398,14 @@ body {
 }
 
 #watermelonPage h1 {
+    font-size: 4vmin;
+}
+
+#mangoPage h1 {
+    font-size: 4vmin;
+}
+
+#tigerPage h1 {
     font-size: 4vmin;
 }
 
@@ -455,6 +481,42 @@ body {
     z-index: 10;
 }
 
+#overlay5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay6 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
 #overlay1 p {
     margin-top: 0;
     margin-bottom: 20px;
@@ -474,6 +536,18 @@ body {
 }
 
 #overlay4 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5vmin;
+}
+
+#overlay5 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5vmin;
+}
+
+#overlay6 p {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 5vmin;
@@ -507,6 +581,24 @@ body {
 }
 
 #overlay4 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay5 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay6 button {
     margin: 10px;
     padding: 15px 30px;
     border: none;
@@ -583,6 +675,30 @@ body {
     flex-wrap: wrap;
 }
 
+#mangoBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tigerBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #appleBoard img {
     height: 118px;
     width: 118px;
@@ -603,6 +719,18 @@ body {
 }
 
 #watermelonBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#mangoBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#tigerBoard img {
     height: 118px;
     width: 118px;
     border: 1px solid #0962a6;
@@ -712,6 +840,14 @@ body {
         font-size: 6vmin;
     }
 
+    #mangoPage h1 {
+        font-size: 6vmin;
+    }
+
+    #tigerPage h1 {
+        font-size: 6vmin;
+    }
+
     #appleBoard {
         width: 80%;
         height: auto;
@@ -744,6 +880,22 @@ body {
         box-sizing: border-box;
     }
 
+    #mangoBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #tigerBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
     #appleBoard img {
         width: calc(33.33%);
         height: auto;
@@ -769,6 +921,22 @@ body {
     }
 
     #watermelonBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #mangoBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #tigerBoard img {
         width: calc(33.33%);
         height: auto;
         box-sizing: border-box;
@@ -833,6 +1001,13 @@ body {
         font-size: 24px;
     }
 
+    #overlay5 p {
+        font-size: 24px;
+    }
+
+    #overlay6 p {
+        font-size: 24px;
+    }
 
     .retry-button {
         font-size: 5vmin;

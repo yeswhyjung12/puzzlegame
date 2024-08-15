@@ -40,14 +40,14 @@ function setupBoard() {
     imgOrder = [...originalOrder]; // imgOrder 배열을 초기 상태로 재설정
     shuffleArray(imgOrder); // 무작위 배열
 
-    let board = document.getElementById("orangeBoard");
+    let board = document.getElementById("tigerBoard");
     if (board) {
         board.innerHTML = ""; // 기존 타일들을 제거
         for (let r = 0; r < rows; r++) {
             for (let c = 0; c < columns; c++) {
                 let tile = document.createElement("img");
                 tile.id = r.toString() + "-" + c.toString();
-                tile.src = "orangeImg/" + imgOrder.shift() + ".jpg";
+                tile.src = "tigerImg/" + imgOrder.shift() + ".jpg";
 
                 // Drag & Drop
                 tile.addEventListener("dragstart", dragstart); // click an image to drag
@@ -65,19 +65,19 @@ function setupBoard() {
                 board.appendChild(tile);
                 
                 turns = 0;
-                document.getElementById("orangeTurns").innerText = turns;
-                document.getElementById("overlay3-turns").innerText = turns;
-                document.getElementById("overlay3").style.display = "none"; // 오버레이를 숨김
+                document.getElementById("tigerTurns").innerText = turns;
+                document.getElementById("overlay6-turns").innerText = turns;
+                document.getElementById("overlay6").style.display = "none"; // 오버레이를 숨김
 
                 console.log('Image added:', tile.src); // 디버그 메시지 추가
             }
         }
     } else {
-        console.error('Element with id "orangeBoard" not found');
+        console.error('Element with id "tigerBoard" not found');
     }
 }
 
-console.log('orange.js script ended');
+console.log('tiger.js script ended');
 
 function resetGame() {
     setupBoard();
@@ -148,8 +148,8 @@ function touchmove(e) {
 }
 
 function touchend(e) {
-    SOUND.play();
-    swapTiles();
+     SOUND.play();
+     swapTiles();
 }
 
 function swapTiles() {
@@ -177,14 +177,14 @@ function swapTiles() {
         otherTile.src = currImg;
 
         turns += 1;
-        document.getElementById("orangeTurns").innerText = turns;
-        document.getElementById("overlay3-turns").innerText = turns;
+        document.getElementById("tigerTurns").innerText = turns;
+        document.getElementById("overlay6-turns").innerText = turns;
 
         if (checkCompletion()) {
             disableTiles();
             setTimeout(playMelody, 300);
             setTimeout(() => {
-                document.getElementById("overlay3").style.display = "flex"; // 오버레이를 표시
+                document.getElementById("overlay6").style.display = "flex"; // 오버레이를 표시
             }, 700); // 0.7초 지연
         }
     }
@@ -225,7 +225,7 @@ function checkCompletion() {
 }
 
 function disableTiles() {
-    let tiles = document.querySelectorAll("#orangeBoard img");
+    let tiles = document.querySelectorAll("#tigerBoard img");
     tiles.forEach(tile => {
         tile.style.pointerEvents = 'none'; // 타일 클릭 비활성화
     });
