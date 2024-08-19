@@ -1,2 +1,3 @@
 User-agent: *
 Allow:/
+Sitemap: https://playpuzzle.netlify.app/sitemap.xml
