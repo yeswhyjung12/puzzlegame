@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle Game</title>
+    <meta name="author" content="coding-girin">
     <meta name="keywords" content="퍼즐 게임, 슬라이딩 퍼즐, puzzle game, sliding puzzle">
-    <meta name="description"
-        content="퍼즐 맞추기 좋아하는 사람? 다양한 퍼즐 게임을 즐겨보자! Who likes doing puzzles? Let’s enjoy various puzzle games!">
-    <meta property="og : type" content="website">
-    <meta property="og : title" content="Puzzle Games">
-    <meta property="og : url" content="https://playpuzzle.netlify.app/">
-    <meta property="og : description" content="심심할 때는 퍼즐 게임 즐기기 Play puzzle games when you're bored">
-    <meta property="og: image" content="images/puzzlegame.png">
+    <meta name="description" content="퍼즐 맞추기 좋아하는 사람? 다양한 퍼즐 게임을 즐겨보자! Who likes doing puzzles? Let’s enjoy various puzzle games!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Puzzle Games">
+    <meta property="og:url" content="https://playpuzzle.netlify.app/">
+    <meta property="og:description" content="심심할 때는 퍼즐 게임 즐기기 Play puzzle games when you're bored">
+    <!-- <meta property="og:image" content="images/puzzlegame.png"> -->
+    <meta property="og:image" content="images/apple.png">
     <meta name="twitter:card" content="website">
     <meta name="twitter:title" content="Puzzle Games">
     <meta name="twitter:url" content="https://playpuzzle.netlify.app/">
     <meta name="twitter:description" content="심심할 때는 퍼즐 게임 즐기기 Play puzzle games when you're bored">
-    <meta name="twitter:image" content="images/puzzlegame.png">
+    <!-- <meta name="twitter:image" content="images/puzzlegame.png"> -->
+    <meta name="twitter:image" content="images/apple.png">
     <link rel="icon" href="images/girin.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+    <meta name="naver-site-verification" content="735770a99f8f17cda726eff849cef48728f1c77c" />
 </head>
 
 <body>
@@ -40,8 +43,7 @@
         </div>
         <h1 data-i18n="chooseGame">게임을 선택해 주세요</h1>
         <div id="goGame">
-            <a href="https://my-puzzle.kr/" onclick="showOwnPuzzle(event)"><img id="mypuzzle"
-                    src="images/MyPuzzle.png">
+            <a href="https://my-puzzle.kr/" onclick="showOwnPuzzle(event)"><img id="mypuzzle" src="images/MyPuzzle.png">
                 <p data-i18n="tryGame">나의 사진으로 직소 퍼즐을 만들어 게임에 도전하세요 </p>
             </a>
         </div>
@@ -53,10 +55,16 @@
                     <a href="#applePage" onclick="showApplePage(event)"><img src="images/apple.jpg" alt=""></a>
                     <a href="#grapePage" onclick="showGrapePage(event)"><img src="images/grape.jpg" alt=""></a>
                     <a href="#orangePage" onclick="showOrangePage(event)"><img src="images/orange.jpg" alt=""></a>
-                    <a href="#watermelonPage" onclick="showWatermelonPage(event)"><img src="images/watermelon.jpg" alt=""></a>
+                    <a href="#watermelonPage" onclick="showWatermelonPage(event)"><img src="images/watermelon.jpg"
+                            alt=""></a>
                     <a href="#mangoPage" onclick="showMangoPage(event)"><img src="images/mango.jpg" alt=""></a>
                     <a href="#tigerPage" onclick="showTigerPage(event)"><img src="images/tiger.jpg" alt=""></a>
-                    
+                    <a href="#lionPage" onclick="showLionPage(event)"><img src="images/lion.jpg" alt=""></a>
+                    <a href="#catPage" onclick="showCatPage(event)"><img src="images/cat.jpg" alt=""></a>
+                    <a href="#dogPage" onclick="showDogPage(event)"><img src="images/dog.jpg" alt=""></a>
+                    <a href="#dolpinPage" onclick="showDolpinPage(event)"><img src="images/dolpin.jpg" alt=""></a>
+
+
                 </div>
             </div>
             <br>
@@ -492,6 +500,291 @@
         </div>
     </section>
     <!-- ---------------------------------------------------------------------- -->
+    <section id="lionPage" style="display: none;">
+        <div class="firstSect">
+            <p>❕Finish in 20 Turns❕</p>
+            <button class="goMenu" onclick="goBack(event)">back</button>
+        </div>
+        <div id="lionBoard"></div>
+        <h1>Turns: <span id="lionTurns">0</span></h1>
+        <br>
+        <div class="blackBoard">
+            <div class="screen">
+                <div class="contents">
+                    <p>Answer</p>
+                    <img src="images/lion.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="secondSect">
+            <div class="textBox">
+                <p>게임방법</p>
+                정사각형의 퍼즐 판에 퍼즐 조각들이 임의로 배열되어 있습니다.
+                <br>
+                <br>
+                퍼즐을 오른쪽, 왼쪽, 위, 아래 방향으로 움직일 수 있습니다. 대각선 혹은 멀리 떨어진 곳으로는 이동할 수 없습니다.
+                <br>
+                <br>
+                정답 이미지를 보고 기억해서 퍼즐을 맞춰보세요. 헷갈리거나 까먹었다면 정답을 언제든 다시 봐도 됩니다.
+                <br>
+                <br>
+                <span style="font-weight: bold;">퍼즐 조각을 움직일 때마다 턴 수가 증가합니다. 적은 턴 수로 퍼즐을 완성해 보세요.</span>
+                <br>
+                <br>
+                슬라이딩 퍼즐은 문제 해결 능력과 논리적 사고를 기르는 데 도움이 됩니다. 두뇌 활동을 자극하고 인지 기능을 향상시켜 치매 예방에도 긍정적인 효과를 줍니다.
+                <br>
+                <br>
+                이제 재미있고 유익한 게임을 즐겨보세요!
+            </div>
+            <div class="textBox">
+                <p>Game Rules</p>
+                Puzzle pieces are arranged randomly on a square puzzle board.
+                <br>
+                <br>
+                You can move the puzzle to the right, left, up, and down directions. You cannot move diagonally or far
+                away.
+                <br>
+                <br>
+                Look at the correct answer image and remember it and solve the puzzle. If you're confused or forgot, you
+                can
+                always look at the answer again.
+                <br>
+                <br>
+                <span style="font-weight: bold;">Number of turns increases each time the puzzle piece is moved. Complete
+                    the
+                    puzzle with fewer turns.</span>
+                <br>
+                <br>
+                Sliding puzzles help develop problem-solving skills and logical thinking. It stimulates brain activity
+                and
+                improves cognitive function, which has a positive effect on preventing dementia
+                <br>
+                <br>
+                Now enjoy fun and helpful games!
+            </div>
+        </div>
+        <div id="overlay7">
+            <p>Finish!</p>
+            <p>Turns: <span id="overlay7-turns">0</span></p>
+            <button class="retry-button" onclick="resetGame()">Restart</button>
+            <button class="other-game-button" onclick="otherGame()">Other puzzles</button>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------- -->
+    <section id="catPage" style="display: none;">
+        <div class="firstSect">
+            <p>❕Finish in 20 Turns❕</p>
+            <button class="goMenu" onclick="goBack(event)">back</button>
+        </div>
+        <div id="catBoard"></div>
+        <h1>Turns: <span id="catTurns">0</span></h1>
+        <br>
+        <div class="blackBoard">
+            <div class="screen">
+                <div class="contents">
+                    <p>Answer</p>
+                    <img src="images/cat.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="secondSect">
+            <div class="textBox">
+                <p>게임방법</p>
+                정사각형의 퍼즐 판에 퍼즐 조각들이 임의로 배열되어 있습니다.
+                <br>
+                <br>
+                퍼즐을 오른쪽, 왼쪽, 위, 아래 방향으로 움직일 수 있습니다. 대각선 혹은 멀리 떨어진 곳으로는 이동할 수 없습니다.
+                <br>
+                <br>
+                정답 이미지를 보고 기억해서 퍼즐을 맞춰보세요. 헷갈리거나 까먹었다면 정답을 언제든 다시 봐도 됩니다.
+                <br>
+                <br>
+                <span style="font-weight: bold;">퍼즐 조각을 움직일 때마다 턴 수가 증가합니다. 적은 턴 수로 퍼즐을 완성해 보세요.</span>
+                <br>
+                <br>
+                슬라이딩 퍼즐은 문제 해결 능력과 논리적 사고를 기르는 데 도움이 됩니다. 두뇌 활동을 자극하고 인지 기능을 향상시켜 치매 예방에도 긍정적인 효과를 줍니다.
+                <br>
+                <br>
+                이제 재미있고 유익한 게임을 즐겨보세요!
+            </div>
+            <div class="textBox">
+                <p>Game Rules</p>
+                Puzzle pieces are arranged randomly on a square puzzle board.
+                <br>
+                <br>
+                You can move the puzzle to the right, left, up, and down directions. You cannot move diagonally or far
+                away.
+                <br>
+                <br>
+                Look at the correct answer image and remember it and solve the puzzle. If you're confused or forgot, you
+                can
+                always look at the answer again.
+                <br>
+                <br>
+                <span style="font-weight: bold;">Number of turns increases each time the puzzle piece is moved. Complete
+                    the
+                    puzzle with fewer turns.</span>
+                <br>
+                <br>
+                Sliding puzzles help develop problem-solving skills and logical thinking. It stimulates brain activity
+                and
+                improves cognitive function, which has a positive effect on preventing dementia
+                <br>
+                <br>
+                Now enjoy fun and helpful games!
+            </div>
+        </div>
+        <div id="overlay8">
+            <p>Finish!</p>
+            <p>Turns: <span id="overlay8-turns">0</span></p>
+            <button class="retry-button" onclick="resetGame()">Restart</button>
+            <button class="other-game-button" onclick="otherGame()">Other puzzles</button>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------- -->
+    <section id="dogPage" style="display: none;">
+        <div class="firstSect">
+            <p>❕Finish in 20 Turns❕</p>
+            <button class="goMenu" onclick="goBack(event)">back</button>
+        </div>
+        <div id="dogBoard"></div>
+        <h1>Turns: <span id="dogTurns">0</span></h1>
+        <br>
+        <div class="blackBoard">
+            <div class="screen">
+                <div class="contents">
+                    <p>Answer</p>
+                    <img src="images/dog.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="secondSect">
+            <div class="textBox">
+                <p>게임방법</p>
+                정사각형의 퍼즐 판에 퍼즐 조각들이 임의로 배열되어 있습니다.
+                <br>
+                <br>
+                퍼즐을 오른쪽, 왼쪽, 위, 아래 방향으로 움직일 수 있습니다. 대각선 혹은 멀리 떨어진 곳으로는 이동할 수 없습니다.
+                <br>
+                <br>
+                정답 이미지를 보고 기억해서 퍼즐을 맞춰보세요. 헷갈리거나 까먹었다면 정답을 언제든 다시 봐도 됩니다.
+                <br>
+                <br>
+                <span style="font-weight: bold;">퍼즐 조각을 움직일 때마다 턴 수가 증가합니다. 적은 턴 수로 퍼즐을 완성해 보세요.</span>
+                <br>
+                <br>
+                슬라이딩 퍼즐은 문제 해결 능력과 논리적 사고를 기르는 데 도움이 됩니다. 두뇌 활동을 자극하고 인지 기능을 향상시켜 치매 예방에도 긍정적인 효과를 줍니다.
+                <br>
+                <br>
+                이제 재미있고 유익한 게임을 즐겨보세요!
+            </div>
+            <div class="textBox">
+                <p>Game Rules</p>
+                Puzzle pieces are arranged randomly on a square puzzle board.
+                <br>
+                <br>
+                You can move the puzzle to the right, left, up, and down directions. You cannot move diagonally or far
+                away.
+                <br>
+                <br>
+                Look at the correct answer image and remember it and solve the puzzle. If you're confused or forgot, you
+                can
+                always look at the answer again.
+                <br>
+                <br>
+                <span style="font-weight: bold;">Number of turns increases each time the puzzle piece is moved. Complete
+                    the
+                    puzzle with fewer turns.</span>
+                <br>
+                <br>
+                Sliding puzzles help develop problem-solving skills and logical thinking. It stimulates brain activity
+                and
+                improves cognitive function, which has a positive effect on preventing dementia
+                <br>
+                <br>
+                Now enjoy fun and helpful games!
+            </div>
+        </div>
+        <div id="overlay9">
+            <p>Finish!</p>
+            <p>Turns: <span id="overlay9-turns">0</span></p>
+            <button class="retry-button" onclick="resetGame()">Restart</button>
+            <button class="other-game-button" onclick="otherGame()">Other puzzles</button>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------- -->
+    <section id="dolpinPage" style="display: none;">
+        <div class="firstSect">
+            <p>❕Finish in 20 Turns❕</p>
+            <button class="goMenu" onclick="goBack(event)">back</button>
+        </div>
+        <div id="dolpinBoard"></div>
+        <h1>Turns: <span id="dolpinTurns">0</span></h1>
+        <br>
+        <div class="blackBoard">
+            <div class="screen">
+                <div class="contents">
+                    <p>Answer</p>
+                    <img src="images/dolpin.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="secondSect">
+            <div class="textBox">
+                <p>게임방법</p>
+                정사각형의 퍼즐 판에 퍼즐 조각들이 임의로 배열되어 있습니다.
+                <br>
+                <br>
+                퍼즐을 오른쪽, 왼쪽, 위, 아래 방향으로 움직일 수 있습니다. 대각선 혹은 멀리 떨어진 곳으로는 이동할 수 없습니다.
+                <br>
+                <br>
+                정답 이미지를 보고 기억해서 퍼즐을 맞춰보세요. 헷갈리거나 까먹었다면 정답을 언제든 다시 봐도 됩니다.
+                <br>
+                <br>
+                <span style="font-weight: bold;">퍼즐 조각을 움직일 때마다 턴 수가 증가합니다. 적은 턴 수로 퍼즐을 완성해 보세요.</span>
+                <br>
+                <br>
+                슬라이딩 퍼즐은 문제 해결 능력과 논리적 사고를 기르는 데 도움이 됩니다. 두뇌 활동을 자극하고 인지 기능을 향상시켜 치매 예방에도 긍정적인 효과를 줍니다.
+                <br>
+                <br>
+                이제 재미있고 유익한 게임을 즐겨보세요!
+            </div>
+            <div class="textBox">
+                <p>Game Rules</p>
+                Puzzle pieces are arranged randomly on a square puzzle board.
+                <br>
+                <br>
+                You can move the puzzle to the right, left, up, and down directions. You cannot move diagonally or far
+                away.
+                <br>
+                <br>
+                Look at the correct answer image and remember it and solve the puzzle. If you're confused or forgot, you
+                can
+                always look at the answer again.
+                <br>
+                <br>
+                <span style="font-weight: bold;">Number of turns increases each time the puzzle piece is moved. Complete
+                    the
+                    puzzle with fewer turns.</span>
+                <br>
+                <br>
+                Sliding puzzles help develop problem-solving skills and logical thinking. It stimulates brain activity
+                and
+                improves cognitive function, which has a positive effect on preventing dementia
+                <br>
+                <br>
+                Now enjoy fun and helpful games!
+            </div>
+        </div>
+        <div id="overlay10">
+            <p>Finish!</p>
+            <p>Turns: <span id="overlay10-turns">0</span></p>
+            <button class="retry-button" onclick="resetGame()">Restart</button>
+            <button class="other-game-button" onclick="otherGame()">Other puzzles</button>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------- -->
+
 
 
     <script src="whiteboard.js"></script>

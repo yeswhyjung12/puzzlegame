@@ -74,7 +74,7 @@ body {
     right: 10%;
 }
 
-#langs label{
+#langs label {
     font-size: 2.4vmin;
 }
 
@@ -235,7 +235,7 @@ body {
         right: 6vmin;
     }
 
-    #langs label{
+    #langs label {
         font-size: 16px;
     }
 
@@ -243,7 +243,7 @@ body {
         font-size: 18px;
         /* border: none; */
     }
-    
+
     #mypuzzle {
         width: 80%;
     }
@@ -351,6 +351,42 @@ body {
     /* background-color: lightgray; */
 }
 
+#lionPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#catPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#dogPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
+#dolpinPage {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #0962a6;
+    /* background-color: lightgray; */
+}
+
 .firstSect {
     width: 100%;
     height: 80px;
@@ -406,6 +442,22 @@ body {
 }
 
 #tigerPage h1 {
+    font-size: 4vmin;
+}
+
+#lionPage h1 {
+    font-size: 4vmin;
+}
+
+#catPage h1 {
+    font-size: 4vmin;
+}
+
+#dogPage h1 {
+    font-size: 4vmin;
+}
+
+#dolpinPage h1 {
     font-size: 4vmin;
 }
 
@@ -517,6 +569,78 @@ body {
     z-index: 10;
 }
 
+#overlay7 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay8 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay10 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    color: #ffffff;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
 #overlay1 p {
     margin-top: 0;
     margin-bottom: 20px;
@@ -548,6 +672,30 @@ body {
 }
 
 #overlay6 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5vmin;
+}
+
+#overlay7 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5vmin;
+}
+
+#overlay8 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5vmin;
+}
+
+#overlay9 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 5vmin;
+}
+
+#overlay10 p {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 5vmin;
@@ -599,6 +747,42 @@ body {
 }
 
 #overlay6 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay7 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay8 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay9 button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#overlay10 button {
     margin: 10px;
     padding: 15px 30px;
     border: none;
@@ -699,6 +883,54 @@ body {
     flex-wrap: wrap;
 }
 
+#lionBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#catBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dogBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dolpinBoard {
+    height: 360px;
+    width: 360px;
+    display: grid;
+    background-color: skyblue;
+    border: 10px solid #005494;
+    border-radius: 6px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #appleBoard img {
     height: 118px;
     width: 118px;
@@ -731,6 +963,30 @@ body {
 }
 
 #tigerBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#lionBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#catBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#dogBoard img {
+    height: 118px;
+    width: 118px;
+    border: 1px solid #0962a6;
+}
+
+#dolpinBoard img {
     height: 118px;
     width: 118px;
     border: 1px solid #0962a6;
@@ -848,6 +1104,22 @@ body {
         font-size: 6vmin;
     }
 
+    #lionPage h1 {
+        font-size: 6vmin;
+    }
+
+    #catPage h1 {
+        font-size: 6vmin;
+    }
+
+    #dogePage h1 {
+        font-size: 6vmin;
+    }
+
+    #dolpinPage h1 {
+        font-size: 6vmin;
+    }
+
     #appleBoard {
         width: 80%;
         height: auto;
@@ -896,6 +1168,38 @@ body {
         box-sizing: border-box;
     }
 
+    #lionBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #catBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #dogBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    #dolpinBoard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
     #appleBoard img {
         width: calc(33.33%);
         height: auto;
@@ -937,6 +1241,38 @@ body {
     }
 
     #tigerBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #lionBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #catBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #dogBoard img {
+        width: calc(33.33%);
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        border: 1px solid #0962a6;
+    }
+
+    #dolpinBoard img {
         width: calc(33.33%);
         height: auto;
         box-sizing: border-box;
@@ -1006,6 +1342,22 @@ body {
     }
 
     #overlay6 p {
+        font-size: 24px;
+    }
+
+    #overlay7 p {
+        font-size: 24px;
+    }
+
+    #overlay8 p {
+        font-size: 24px;
+    }
+
+    #overlay9 p {
+        font-size: 24px;
+    }
+
+    #overlay10 p {
         font-size: 24px;
     }
 

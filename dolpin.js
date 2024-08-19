@@ -40,14 +40,14 @@ function setupBoard() {
     imgOrder = [...originalOrder]; // imgOrder 배열을 초기 상태로 재설정
     shuffleArray(imgOrder); // 무작위 배열
 
-    let board = document.getElementById("watermelonBoard");
+    let board = document.getElementById("dolpinBoard");
     if (board) {
         board.innerHTML = ""; // 기존 타일들을 제거
         for (let r = 0; r < rows; r++) {
             for (let c = 0; c < columns; c++) {
                 let tile = document.createElement("img");
                 tile.id = r.toString() + "-" + c.toString();
-                tile.src = "watermelonImg/" + imgOrder.shift() + ".jpg";
+                tile.src = "dolpinImg/" + imgOrder.shift() + ".jpg";
 
                 // Drag & Drop
                 tile.addEventListener("dragstart", dragstart); // click an image to drag
@@ -63,21 +63,21 @@ function setupBoard() {
                 tile.addEventListener("touchend", touchend);
 
                 board.appendChild(tile);
-                
+
                 turns = 0;
-                document.getElementById("watermelonTurns").innerText = turns;
-                document.getElementById("overlay4-turns").innerText = turns;
-                document.getElementById("overlay4").style.display = "none"; // 오버레이를 숨김
+                document.getElementById("dolpinTurns").innerText = turns;
+                document.getElementById("overlay10-turns").innerText = turns;
+                document.getElementById("overlay10").style.display = "none"; // 오버레이를 숨김
 
                 console.log('Image added:', tile.src); // 디버그 메시지 추가
             }
         }
     } else {
-        console.error('Element with id "watermelonBoard" not found');
+        console.error('Element with id "dolpinBoard" not found');
     }
 }
 
-console.log('watermelon.js script ended');
+console.log('dolpin.js script ended');
 
 function resetGame() {
     setupBoard();
@@ -181,14 +181,14 @@ function swapTiles() {
         otherTile.src = currImg;
 
         turns += 1;
-        document.getElementById("watermelonTurns").innerText = turns;
-        document.getElementById("overlay4-turns").innerText = turns;
+        document.getElementById("dolpinTurns").innerText = turns;
+        document.getElementById("overlay10-turns").innerText = turns;
 
         if (checkCompletion()) {
             disableTiles();
             setTimeout(playMelody, 300);
             setTimeout(() => {
-                document.getElementById("overlay4").style.display = "flex"; // 오버레이를 표시
+                document.getElementById("overlay10").style.display = "flex"; // 오버레이를 표시
             }, 700); // 0.7초 지연
         }
     }
@@ -229,7 +229,7 @@ function checkCompletion() {
 }
 
 function disableTiles() {
-    let tiles = document.querySelectorAll("#watermelonBoard img");
+    let tiles = document.querySelectorAll("#dolpinBoard img");
     tiles.forEach(tile => {
         tile.style.pointerEvents = 'none'; // 타일 클릭 비활성화
     });

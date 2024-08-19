@@ -557,6 +557,10 @@ function otherGame() {
     document.getElementById('watermelonPage').style.display = 'none';
     document.getElementById('mangoPage').style.display = 'none';
     document.getElementById('tigerPage').style.display = 'none';
+    document.getElementById('lionPage').style.display = 'none';
+    document.getElementById('catPage').style.display = 'none';
+    document.getElementById('dogPage').style.display = 'none';
+    document.getElementById('dolpinPage').style.display = 'none';
     document.getElementById('ownPuzzle').style.display = 'none';
 }
 
