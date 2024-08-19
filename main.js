@@ -194,7 +194,7 @@ function showDolpinPage(event) {
     document.getElementById('catPage').style.display = 'none';
     document.getElementById('dogPage').style.display = 'none';
     document.getElementById('dolpinPage').style.display = 'block';
-    loadScript('dolpinr.js', function () {
+    loadScript('dolpin.js', function () {
         console.log('dolpin.js loaded');
         setupBoard();
     });
